@@ -4,6 +4,7 @@ const morgan = require("morgan");
 
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
+const PORT = process.env.PORT || 8080
 
 
 
@@ -58,7 +59,7 @@ app.use("/api/v1/users", userroutes);
 app.use("/api/v1/blogs", blogroutes);
 
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
     console.log("serve is running"
     );
 });
